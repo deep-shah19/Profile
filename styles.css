@@ -99,11 +99,19 @@ h1, h2, h3, .h5, .h6, .brand {
 .card-soft { background: linear-gradient(180deg, var(--theme-bg), #fff); }
 .card-primary { background: var(--theme-primary); color: #fff; }
 .card .max-text { max-width: 720px; }
-.facts { display: grid; gap: 12px; }
-.fact-row { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center; }
+.facts { display: grid; gap: 16px; }
+/* no-icon variant: label/value in neat two columns */
+.fact-row.no-icon { display: grid; grid-template-columns: 160px 1fr; align-items: center; column-gap: 16px; }
+.fact-row.no-icon .label { color: #d1d5db; font-weight: 500; }
+.fact-row.no-icon .value { color: #fff; font-weight: 700; text-align: right; }
+/* legacy icon styles kept for potential reuse */
+.fact-row { display: grid; align-items: center; }
 .fact-icon { color: #cfe2ff; background: rgba(255,255,255,0.15); width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; }
-.fact .value { font-weight: 700; color: #fff; }
-.fact .muted { color: #d1d5db; }
+
+@media (max-width: 560px) {
+  .fact-row.no-icon { grid-template-columns: 1fr; row-gap: 4px; }
+  .fact-row.no-icon .value { text-align: left; }
+}
 .highlight { background: rgba(14, 165, 233, 0.1); border-radius: 10px; padding: 12px; margin-top: 12px; }
 
 /* Interests */
