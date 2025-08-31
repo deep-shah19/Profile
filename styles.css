@@ -146,7 +146,7 @@ h1, h2, h3, .h5, .h6, .brand {
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .gallery-card { position: relative; display: block; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 24px rgba(0,0,0,0.08); }
 .gallery-card img { width: 100%; height: 240px; object-fit: cover; display: block; }
-.gallery-card img.focus-top { object-position: 50% 20%; }
+.gallery-card img.focus-top { object-position: 50% 30%; object-fit: cover; }
 .gallery-card img.contain-bg { object-fit: contain; background: #f3f4f6; }
 .gallery-card .overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30,58,138,0.3), rgba(14,165,233,0.25)); opacity: 0; transition: 0.2s; }
 .gallery-card:hover .overlay { opacity: 1; }
